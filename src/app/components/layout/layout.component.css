@@ -1,0 +1,21 @@
+.full-height {
+  height: 100vh;
+}
+
+.content {
+  padding: 20px;
+}
+.sidenav-container {
+  height: 100vh;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.sidenav {
+  background-color: gray;
+  color: white;
+}

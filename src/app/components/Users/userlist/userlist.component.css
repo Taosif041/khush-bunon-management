@@ -1,0 +1,34 @@
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.active {
+  color: green;
+  font-weight: bold;
+}
+
+.removed {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,55 @@
+<form [formGroup]="userForm!" (ngSubmit)="submitForm()" class="user-form">
+  <div>
+    <label>Name</label>
+    <input type="text" formControlName="name" required />
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input type="email" formControlName="email" required />
+  </div>
+
+  <div>
+    <label>Contact No</label>
+    <input type="text" formControlName="contactNo" required />
+  </div>
+
+  <div>
+    <label>Profession</label>
+    <input type="text" formControlName="profession" />
+  </div>
+
+  <div>
+    <label>Member Type</label>
+    <input type="text" formControlName="memberType" />
+  </div>
+
+  <div>
+    <label>Personal Details</label>
+    <textarea formControlName="personalDetails"></textarea>
+  </div>
+
+  <div>
+    <label>Registered</label>
+    <input type="date" formControlName="registered" />
+  </div>
+
+  <div>
+    <label>Added By</label>
+    <input type="text" formControlName="addedBy" />
+  </div>
+
+  <div class="btn-group">
+    <button type="submit">{{ isEditMode ? "Update" : "Add" }} User</button>
+    <button type="button" *ngIf="isEditMode" (click)="deleteUser()">
+      Delete
+    </button>
+    <button
+      type="button"
+      *ngIf="isEditMode"
+      (click)="userForm?.reset(); isEditMode = false"
+    >
+      Cancel
+    </button>
+  </div>
+</form>

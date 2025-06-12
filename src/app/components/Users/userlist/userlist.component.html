@@ -1,1 +1,28 @@
-<p>userlist works!</p>
+<table class="user-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Profession</th>
+      <th>Member Type</th>
+      <th>Registered</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.contactNo }}</td>
+      <td>{{ user.profession }}</td>
+      <td>{{ user.memberType }}</td>
+      <td>{{ user.registered | date }}</td>
+      <td>
+        <span [ngClass]="{ active: user.isActive, removed: user.isRemoved }">
+          {{ user.isRemoved ? "Removed" : "Active" }}
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
